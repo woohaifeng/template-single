@@ -26,6 +26,7 @@
         <pagehelper.version>1.2.12</pagehelper.version>
         <jwt.version>3.8.1</jwt.version>
         <jjwt.version>0.9.1</jjwt.version>
+        <common.lang.version>3.3.2</common.lang.version>
     </properties>
 
     <parent>
@@ -137,6 +138,14 @@
         </dependency>
 
         <!-- jwt end -->
+
+        <!-- lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${common.lang.version}</version>
+        </dependency>
+        <!-- lang end -->
     </dependencies>
 
 </project>
