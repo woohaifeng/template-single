@@ -13,7 +13,7 @@
 
         <!-- 配置 tk.mybatis 插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="tk.mybatis.tk.mybatis.mapper.MMapper"/>
+            <property name="mappers" value="tk.mybatis.mapper.MMapper"/>
         </plugin>
 
         <!-- 配置数据库连接 -->
@@ -41,6 +41,10 @@
         <!--<generatedKey column="id" sqlStatement="Mysql" identity="false"/>-->
         <!--</table>-->
         <table tableName="tb_user">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table tableName="tb_dept">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
 

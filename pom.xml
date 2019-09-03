@@ -27,6 +27,7 @@
         <jwt.version>3.8.1</jwt.version>
         <jjwt.version>0.9.1</jjwt.version>
         <common.lang.version>3.3.2</common.lang.version>
+        <pagehelper.version>1.2.5</pagehelper.version>
     </properties>
 
     <parent>
@@ -54,6 +55,12 @@
                 <groupId>com.company</groupId>
                 <artifactId>service</artifactId>
                 <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -115,12 +122,6 @@
             <version>${spring-boot-mapper.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${pagehelper.version}</version>
-        </dependency>
-
         <!-- db end -->
 
         <!-- jwt -->
@@ -146,6 +147,22 @@
             <version>${common.lang.version}</version>
         </dependency>
         <!-- lang end -->
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+        <!-- lombok end-->
+
+        <!-- pageHelper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        <!-- pageHelper end -->
     </dependencies>
 
 </project>

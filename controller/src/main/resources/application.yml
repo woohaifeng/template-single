@@ -1,6 +1,8 @@
 spring:
   application:
     name: template-single
+  profiles:
+    include: redis
 
   datasource:
     username: root
