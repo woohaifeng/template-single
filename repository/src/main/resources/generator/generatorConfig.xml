@@ -36,17 +36,25 @@
                 targetProject="src/main/java"
                 type="XMLMAPPER"/>
 
+
+        <!--<table tableName="tb_user">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="tb_dept">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!-- extends TbMenuExtends -->
+        <table tableName="tb_menu">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+
         <!--&lt;!&ndash; itoken-service-admin 管理员服务 Begin &ndash;&gt;-->
         <!--<table catalog="itoken-service-admin" tableName="tb_sys_user">-->
         <!--<generatedKey column="id" sqlStatement="Mysql" identity="false"/>-->
         <!--</table>-->
-        <table tableName="tb_user">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-
-        <table tableName="tb_dept">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
 
         <!-- itoken-service-posts 文章服务 -->
         <!--<table catalog="itoken-service-posts" tableName="tb_posts_post">-->

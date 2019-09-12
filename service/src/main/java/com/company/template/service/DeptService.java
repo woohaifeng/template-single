@@ -9,6 +9,9 @@ import java.util.List;
 @Transactional(readOnly = true)
 public interface DeptService {
 
-    public PageInfo list(Integer page, Integer size, TbDept tbDept);
+    PageInfo list(Integer page, Integer size, TbDept tbDept);
 
+    Integer add(TbDept tbDept);
+
+    Integer deleles(Integer[] ids);
 }

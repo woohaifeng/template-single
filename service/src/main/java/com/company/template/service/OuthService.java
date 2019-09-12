@@ -1,5 +1,6 @@
 package com.company.template.service;
 
+import com.company.template.common.entity.LoginUser;
 import com.company.template.repository.domain.TbUser;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,6 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly = true)
 public interface OuthService {
 
-    public TbUser login(String loginCode, String plainPassword);
+    public TbUser login(LoginUser loginUser);
 
 }

@@ -23,11 +23,25 @@ public class DeptController {
         return ResponseDTO.successWithDC(pageInfo.getList(),cursor);
     }
 
-//    @PostMapping(value = "/list")
-//    public List<TbDept> list(@RequestParam(value="page") Integer page,@RequestParam(value="size") Integer size,@RequestParam(value = "name",required = true) String name) {
-//        System.out.println(name);
-//        return deptService.list(page,size,name);
-//    }
+    @PostMapping(value = "/add")
+    public ResponseDTO add(@RequestBody TbDept tbDept) {
+        Integer count = deptService.add(tbDept);
+        if(count>0) {
+            return ResponseDTO.success();
+        } else {
+            return ResponseDTO.fail();
+        }
+    }
 
+    @DeleteMapping(value= "/deletes")
+    public ResponseDTO deletes(@RequestParam(value = "ids",required = true) Integer[] ids) {
+        Integer count = -1;
+        count = deptService.deleles(ids);
+        if(count>0) {
+            return ResponseDTO.success();
+        } else {
+            return ResponseDTO.fail();
+        }
+    }
 
 }
