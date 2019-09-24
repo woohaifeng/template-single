@@ -46,9 +46,14 @@
         <!--</table>-->
 
         <!-- extends TbMenuExtends -->
-        <table tableName="tb_menu">
+        <!--<table tableName="tb_menu">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <table tableName="tb_template">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
+
 
 
         <!--&lt;!&ndash; itoken-service-admin 管理员服务 Begin &ndash;&gt;-->

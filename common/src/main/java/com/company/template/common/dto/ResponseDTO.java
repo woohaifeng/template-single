@@ -86,6 +86,7 @@ public class ResponseDTO<T> implements Serializable {
     @AllArgsConstructor
     public static class Cursor {
         private Long total = null;
+        private Integer currentPage = null;
         private Integer limit = null;
         private Integer offset = null;
     }
