@@ -6,6 +6,9 @@ import com.company.template.service.TemplateService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/template")
@@ -22,8 +25,14 @@ public class TemplateController {
     }
 
     @PostMapping(value = "/add")
-    public ResponseDTO add(@RequestBody TbTemplate tbTemplate) {
-        Integer count = templateService.add(tbTemplate);
+    public ResponseDTO add(@RequestParam(value = "name")String name,@RequestParam(value = "image") MultipartFile image,@RequestParam(value = "files") List<MultipartFile> files) {
+        System.out.println(name);
+        System.out.println(image.getOriginalFilename());
+        for (MultipartFile file : files) {
+            System.out.println(file.getOriginalFilename());
+        }
+//        Integer count = templateService.add(tbTemplate);
+        Integer count = 1;
         if (count > 0) {
             return ResponseDTO.success();
         } else {
